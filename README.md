@@ -1,5 +1,7 @@
 ## Notes and ideas on JavaScript and its peculiarities ##
 
+[Synchronous vs Asynchronous JS](asyncPattern/async.md)
+
 ### Functions
 
 Defining functions: function declaration _vs_ function expressions
