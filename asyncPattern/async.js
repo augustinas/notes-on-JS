@@ -14,10 +14,10 @@ function selectLongWords(arr, callback) {
   }, 2000);
 }
 
-var words = ['me', 'you', 'and', 'the', 'company', 'having', 'fun'];
-
 // Let's make a call to our async function (async API to sound fancy) //
-// When writing node code we would be doing only this bit //
+// When writing node code we would be doing only this bit of code //
+
+var words = ['me', 'you', 'and', 'the', 'company', 'having', 'fun'];
 
 selectLongWords(words, function(err, data) {
   if (err) throw err;

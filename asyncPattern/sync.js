@@ -9,3 +9,5 @@ var words = ['me', 'you', 'and', 'the', 'company', 'having', 'fun'];
 var longWords = selectLongWordsSync(words);
 
 console.log('long words: ' + longWords.join(' '));
+
+console.log('This message should appear last.');

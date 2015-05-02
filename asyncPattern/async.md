@@ -18,11 +18,13 @@ var longWords = selectLongWordsSync(words);
 
 console.log('long words: ' + longWords.join(' '));
 
+console.log('This message should appear last.');
+
 ```
 
-The issue of blocking behaviour can be circumvented by writing asynchronous code. It is not a built-in JS's feature and has to be implemented by the environment running your JS code (browser, node, _etc_).
+The issue of blocking behaviour can be circumvented by writing asynchronous code. It is not a built-in JavaScript feature and has to be implemented by the environment that is running the code (browser, node, _etc_).
 
-Asynchronous code example - I have used _setTimeout()_ method to simulate a call that takes a 'long' time to complete. The given pattern of error treatment is found all over NodeJS.
+Asynchronous code example: I have used _setTimeout()_ method to simulate a call that takes a 'long' time to complete. The given pattern for error treatment is found all over Node.
 
 ```JavaScript
 
@@ -42,10 +44,10 @@ function selectLongWords(arr, callback) {
   }, 2000);
 }
 
-var words = ['me', 'you', 'and', 'the', 'company', 'having', 'fun'];
-
 // Let's make a call to our async function (async API to sound fancy) //
-// When writing node code we would be doing only this bit //
+// When writing node code we would be doing only this bit of code //
+
+var words = ['me', 'you', 'and', 'the', 'company', 'having', 'fun'];
 
 selectLongWords(words, function(err, data) {
   if (err) throw err;
@@ -58,3 +60,14 @@ console.log('This message should appear last. But is it?');
 ```
 
 Note that the results in the console appear in the opposite order from the source code. This is because now the code has _non-blocking_ behaviour.
+
+Both code snippets are included in separate files _sync.js_ and _async.js_. The easiest way to try out the code is to clone the repository run the files:
+
+```bash
+
+node asyncPattern/sync.js
+node asyncPattern/async.js
+
+```
+
+Happy coding days!
