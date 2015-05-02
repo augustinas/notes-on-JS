@@ -22,9 +22,9 @@ console.log('This message should appear last.');
 
 ```
 
-The issue of blocking behaviour can be circumvented by writing asynchronous code. It is not a built-in JavaScript feature and has to be implemented by the environment that is running the code (browser, node, _etc_).
+The issue of blocking behaviour can be circumvented by writing asynchronous code. It is not a built-in JavaScript feature and has to be implemented by the environment that is running your code (browser, node, _etc_).
 
-Asynchronous code example: I have used _setTimeout()_ method to simulate a call that takes a 'long' time to complete. The given pattern for error treatment is found all over Node.
+Asynchronous code example: I have used _setTimeout()_ method to simulate a call that takes 'long' time to complete. The given pattern for error treatment is found all over Node-land.
 
 ```JavaScript
 
